@@ -14,7 +14,7 @@ gem 'unicorn'
 # in production environments by default.
 group :assets do
   gem 'coffee-rails', '~> 4.1.0'
-  gem 'sass-rails',   '~> 5.0.1'
+  gem 'sass-rails',   '~> 5.0'
   gem 'uglifier'
 end
 
