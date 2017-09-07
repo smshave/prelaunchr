@@ -1,12 +1,12 @@
 source 'https://rubygems.org'
 
-ruby '2.3.0'
+ruby '2.4.1'
 
 gem 'activeadmin', '1.0.0.pre2'
 gem 'delayed_job_active_record', '~> 4.0.3'
 gem 'devise'
 gem 'pg'
-gem 'rails', '4.2.5.2'
+gem 'rails', '< 5.0'
 gem 'unicorn'
 
 
