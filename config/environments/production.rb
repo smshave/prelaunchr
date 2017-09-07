@@ -10,14 +10,28 @@ Prelaunchr::Application.configure do
 
   config.eager_load = true
 
+  # Enable Rack::Cache to put a simple HTTP cache in front of your application
+  # Add `rack-cache` to your Gemfile before enabling this.
+  # For large-scale production use, consider using a caching reverse proxy like
+  # NGINX, varnish or squid.
+  # config.action_dispatch.rack_cache = true
+
+  # Apache or NGINX already handles this.
+  config.serve_static_files = ENV['RAILS_SERVE_STATIC_FILES'].present?
+
   # Compress JavaScripts and CSS
   config.assets.compress = true
+  config.assets.js_compressor = :uglifier
+  # config.assets.css_compressor = :sass
+
 
   # Don't fallback to assets pipeline if a precompiled asset is missed
   config.assets.compile = false
 
   # Generate digests for assets URLs
   config.assets.digest = true
+
+  # `config.assets.precompile` and `config.assets.version` have moved to config/initializers/assets.rb
 
   # Defaults to nil and saved in location specified by config.assets.prefix
   # config.assets.manifest = YOUR_PATH
@@ -61,6 +75,9 @@ Prelaunchr::Application.configure do
   config.active_support.deprecation = :notify
 
   config.action_mailer.default_url_options = { :host => ENV['DEFAULT_MAILER_HOST'] }
+
+  # Use default logging formatter so that PID and timestamp are not suppressed.
+  config.log_formatter = ::Logger::Formatter.new
 
   # Log the query plan for queries taking more than this (works
   # with SQLite, MySQL, and PostgreSQL)
