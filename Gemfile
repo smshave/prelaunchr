@@ -1,20 +1,20 @@
 source 'https://rubygems.org'
 
-ruby '2.4.1'
+ruby '2.5.0'
 
-gem 'activeadmin', '1.0.0.pre2'
-gem 'delayed_job_active_record', '~> 4.0.3'
-gem 'devise'
-gem 'pg'
+gem 'activeadmin', '1.3.0'
+gem 'delayed_job_active_record', '~> 4.1.3'
+gem 'devise', '4.4.0'
+gem 'pg', '~> 0.18'
 gem 'rails', '< 5.0'
-gem 'unicorn'
+gem 'unicorn', '5.4.1'
 
 
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
   gem 'coffee-rails', '~> 4.1.0'
-  gem 'sass-rails',   '~> 5.0'
+  gem 'sass-rails',   '5.0.7'
   gem 'uglifier'
 end
 
