@@ -2,7 +2,6 @@ source 'https://rubygems.org'
 
 ruby '2.5.3'
 
-HEAD
 gem 'activeadmin', '1.0.0'
 gem 'delayed_job_active_record', '~> 4.1.2'
 gem 'devise'
@@ -15,7 +14,6 @@ gem 'devise', '4.4.0'
 gem 'pg', '~> 0.18'
 gem 'rails', '< 5.0'
 gem 'unicorn', '5.4.1'
-5a72b052a2fb419c840e91d1f34c355809ea2774
 
 
 # Gems used only for assets and not required
